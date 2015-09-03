@@ -1,0 +1,22 @@
+<ion-view title="{{song.title}}">
+  <ion-content class="has-header has-footer">
+    <div class="list card">
+
+      <div class="item">
+        <h2>{{song.title}}</h2>
+        <p>{{song.artist}}</p>
+        <p>{{song.album}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img ng-src="{{song.image}}">
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        Start listening
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

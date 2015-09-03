@@ -1,0 +1,24 @@
+<ion-view title="{{album}}">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="rightMenu()">
+      <i class="icon ion-plus"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header has-footer">
+    <ion-list can-swipe="listCanSwipe">
+      <ion-item ng-repeat="song in songs | orderBy : '-title' : true | filter: {album: album}" class="item-thumbnail-left" href="#/song/{{song.$id}}">
+
+        <img ng-src="{{song.image}}">
+        <h2>{{song.title}}</h2>
+        <p>{{song.artist}}</p>
+        <ion-option-button class="button-assertive" ng-click="deleteSong(song)">
+          Delete
+        </ion-option-button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>
