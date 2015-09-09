@@ -1,4 +1,4 @@
-app.controller("SearchCtrl", function($scope, $firebaseArray, $ionicSideMenuDelegate, $http, $ionicSideMenuDelegate) {
+app.controller("SearchCtrl", function($scope, $firebaseArray, $ionicSideMenuDelegate, $http) {
   
   var songRef = new Firebase("https://blistering-inferno-3867.firebaseio.com/songs");
 
@@ -10,7 +10,6 @@ app.controller("SearchCtrl", function($scope, $firebaseArray, $ionicSideMenuDele
       $http.get("https://api.spotify.com/v1/search?type=track&limit=8&q=" + $scope.searchInput)
       .success(function(data) {
         $scope.results = data;
-        console.log($scope.results);
       });
     }
   }
