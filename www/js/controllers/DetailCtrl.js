@@ -1,3 +1,5 @@
+//Get individual song data for detail view
+
 app.controller("DetailCtrl", function($scope, $firebaseObject, $stateParams) {
   var id = $stateParams.song;
 
