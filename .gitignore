@@ -11,3 +11,6 @@ ionic.project
 lib/
 scss/
 resources/
+.io-config.json
+hooks/
+
