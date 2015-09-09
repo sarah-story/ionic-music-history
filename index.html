@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/angucomplete-alt/angucomplete-alt.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- Firebase -->
+    <script src="lib/firebase/firebase.js"></script>
+    <script src="lib/angularfire/dist/angularfire.min.js"></script>
+
+    <!-- Filter -->
+    <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
+
+    <!-- Autocomplete -->
+    <script src="lib/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/SongCtrl.js"></script>
+    <script src="js/controllers/DetailCtrl.js"></script>
+    <script src="js/controllers/SearchCtrl.js"></script>
+    <script src="js/controllers/ArtistCtrl.js"></script>
+    <script src="js/controllers/AlbumCtrl.js"></script>
+    <script src="js/controllers/ArtistSongsCtrl.js"></script>
+    <script src="js/controllers/AlbumSongsCtrl.js"></script>
+    <script src="js/factories/Auth.js"></script>
+
+  </head>
+  <body ng-app="MusicApp">
+    
+    <ion-side-menus>
+      
+      <ion-side-menu-content>
+        <ion-nav-bar class="bar-light">
+          <ion-nav-back-button class="button-clear">
+            <i class="ion-chevron-left"></i>
+          </ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view></ion-nav-view>
+        <ion-tabs class="tabs-light tabs-icon-only">
+
+          <ion-tab title="Songs" icon-on="ion-music-note" icon-off="ion-music-note" href="#/songs">
+            
+          </ion-tab>
+
+          <ion-tab title="Albums" icon-on="ion-disc" icon-off="ion-disc" href="#/albums">
+            
+          </ion-tab>
+
+          <ion-tab title="Artists" icon-on="ion-person" icon-off="ion-person" href="#/artists">
+            
+          </ion-tab>
+
+        </ion-tabs>
+      </ion-side-menu-content>
+
+        <!-- Right menu -->
+      <ion-side-menu side="right" ng-controller="SearchCtrl">
+        <div class="bar bar-header item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Add Song" ng-model="searchInput" ng-change="querySpotify()">
+          </label>
+          <button class="button button-clear" ng-click="cancel()">
+            Cancel
+          </button>
+        </div>
+        <ion-content class="has-header">
+          <div class="list">
+
+            <div class="item item-thumbnail-left item-button-right" ng-repeat="track in results.tracks.items">
+              <img ng-src="{{track.album.images[0].url}}">
+              <h2>{{track.name}}</h2>
+              <p>{{track.artists[0].name}}</p>
+              <button class="button button-clear" ng-click="addSong(track)">
+                <i class="icon ion-plus-circled"></i>
+              </button>
+            </div>
+
+          </div>
+        </ion-content>
+      </ion-side-menu>
+
+    </ion-side-menus>
+  
+  </body>
+</html>
