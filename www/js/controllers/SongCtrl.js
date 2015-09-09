@@ -1,4 +1,4 @@
-app.controller("SongCtrl", ["Auth", "$scope", "$firebaseArray", "$firebaseAuth", "$ionicSideMenuDelegate", function(Auth, $scope, $firebaseArray, $ionicSideMenuDelegate) {
+app.controller("SongCtrl", ["Auth", "$scope", "$firebaseArray", "$ionicSideMenuDelegate", function(Auth, $scope, $firebaseArray, $ionicSideMenuDelegate) {
 
   var songRef = new Firebase("https://blistering-inferno-3867.firebaseio.com/songs");
 
