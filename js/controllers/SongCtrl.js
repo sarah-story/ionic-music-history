@@ -16,7 +16,7 @@ app.controller("SongCtrl", ["Auth", "$scope", "$firebaseArray", "$firebaseAuth",
   };
 
   $scope.rightMenu = function() {
-    $scope.sideMenuController.toggleRight();
+    $ionicSideMenuDelegate.toggleRight();
   };
-
+  
 }]);
