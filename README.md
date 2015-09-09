@@ -1,6 +1,6 @@
 # ionic-music-history
 
-This is an iphone/android app I created using the Ionic framework. The ionic framework is based on angular, so most of the code comes from [angular-music-history](http://github.com/sarah-story/angular-music-history). It can be viewed at http://sarah-story.github.io/ionic-music-history
+This is an iphone/android app I created using the [Ionic](http://ionicframework.com/) framework. Ionic is based on angular, so most of the code comes from [angular-music-history](http://github.com/sarah-story/angular-music-history). The app can be viewed at http://sarah-story.github.io/ionic-music-history
 
 ###Functionality
 
