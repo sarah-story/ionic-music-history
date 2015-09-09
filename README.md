@@ -4,6 +4,6 @@ This is an iphone/android app I created using the [Ionic](http://ionicframework.
 
 ###Functionality
 
-This is a basic music library app that allows the user to add and remove songs to a list. The list of songs can be viewed by artist, album, or track, and clicking on a track brings up a detail view. All of the data is stored in firebase.
+This is a basic music library app that allows the user to add and remove songs to a list. The list of songs can be viewed by artist, album, or track, and clicking on a track brings up a detail view. Unfortunately, the app doesn't actually play any music. 
 
-The song suggestions that populate when the user adds a song come from the Spotify API. 
+All of the user's song data is stored in firebase, and the song suggestions that populate when the user adds a song come from the Spotify API. 
