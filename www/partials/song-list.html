@@ -7,6 +7,7 @@
   </ion-nav-buttons>
 
   <ion-content class="has-header has-footer">
+
     <ion-list can-swipe="listCanSwipe">
       <ion-item ng-repeat="song in songs | orderBy : '-title' : true" class="item-thumbnail-left" href="#/song/{{song.$id}}">
 

@@ -7,7 +7,7 @@
   </ion-nav-buttons>
 
   <ion-content class="has-header has-footer">
-    <a class="item item-icon-right" ng-repeat="song in songs | unique: artist" href="#/artists/{{song.artist}}">
+    <a class="item item-icon-right" ng-repeat="song in songs | unique: 'artist'" href="#/artists/{{song.artist}}">
       {{song.artist}}
       <i class="icon ion-chevron-right"></i>
     </a>
