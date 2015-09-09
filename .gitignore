@@ -4,3 +4,10 @@
 node_modules/
 platforms/
 plugins/
+gulpfile.js
+config.xml
+ionic.project
+.editorconfig
+lib/
+scss/
+resources/
